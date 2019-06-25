@@ -1,0 +1,45 @@
+{
+  "name": "ops-master-web",
+  "version": "1.0.0",
+  "description": "This project will create a user interface for all the data points across honest food company",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "type-check": "tsc"
+  },
+  "author": "rishikesh.kumar@honestfoodcompany.de",
+  "license": "ISC",
+  "dependencies": {
+    "@accounts/boost": "^0.15.0",
+    "@accounts/mongo": "^0.15.0",
+    "@accounts/password": "^0.15.0",
+    "apollo-boost": "^0.4.3",
+    "apollo-link-state": "^0.4.2",
+    "graphql": "^14.3.1",
+    "isomorphic-unfetch": "^3.0.0",
+    "less": "^3.9.0",
+    "next": "^8.1.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-apollo": "^2.5.8",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.9.3",
+    "@types/isomorphic-fetch": "0.0.35",
+    "@types/jest": "^24.0.15",
+    "@types/next": "^8.0.5",
+    "@types/react": "^16.8.22",
+    "@types/react-redux": "^7.1.0",
+    "@zeit/next-less": "^1.0.1",
+    "@zeit/next-typescript": "^1.1.1",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1",
+    "typescript": "^3.5.2"
+  }
+}
