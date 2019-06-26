@@ -45,6 +45,7 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "file-loader": "^4.0.0",
+    "formik": "^1.5.7",
     "jest": "^24.8.0",
     "nodemon": "^1.19.1",
     "typescript": "^3.5.2",
