@@ -1,17 +1,25 @@
 import { Component } from "react";
 import { TimerProps } from "../../types/timer.types";
-import "./Timer.less";
-import Link from "next/link";
+import "./Timer.css";
+
+import "tabler-react/dist/Tabler.css";
+
+import { Card, Button } from "tabler-react";
 
 export class TimerComponent extends Component<TimerProps> {
     render() {
         return (
             <>
-                <h1 className="example">Timer</h1>
-                <Link href="/timer">
-                    <a>TIMER_PART2</a>
-                </Link>
-                <p>21:21</p>
+                <h1>Next.js App written in typscript, jest, tabler-react and apollo client</h1>
+                <Card>
+                    <Card.Header>
+                        <Card.Title>Card Title</Card.Title>
+                    </Card.Header>
+                    <Card.Body>
+                        <Button color="primary">A Button</Button>
+                        <Button link>Link</Button>
+                    </Card.Body>
+                </Card>
             </>
         );
     }
