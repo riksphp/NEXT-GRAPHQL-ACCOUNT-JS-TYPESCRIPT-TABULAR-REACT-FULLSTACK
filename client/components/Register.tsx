@@ -1,12 +1,11 @@
 import * as React from "react";
-import { Formik } from "formik";
-import { LoginPage as TablerLoginPage } from "tabler-react";
-import { ILoginValues, ILoginError } from "../types/login.types";
 import "tabler-react/dist/Tabler.css";
-import { accountsPassword } from '../utils/account';
+import { RegisterPage as TablerRegisterPage } from "tabler-react";
+import { Formik } from "formik";
 import Router from 'next/router';
+import { accountsPassword } from '../utils/account';
 
-export class LoginComponent extends React.Component {
+export class RegisterComponent extends React.Component {
     render() {
         return (
             <>
@@ -14,10 +13,11 @@ export class LoginComponent extends React.Component {
                     initialValues={{
                         email: "",
                         password: "",
+                        name: ""
                     }}
-                    validate={(values: ILoginValues) => {
+                    validate={(values) => {
                         // same as above, but feel free to move this into a class method now.
-                        let errors: ILoginError = {};
+                        let errors: any = {};
                         if (!values.email) {
                             errors.email = "Required";
                         } else if (
@@ -33,13 +33,16 @@ export class LoginComponent extends React.Component {
                     ) => {
                         setSubmitting(true);
                         try {
-                            await accountsPassword.login({
+                            await accountsPassword.createUser({
                                 password: values.password,
-                                user: {
-                                    email: values.email,
-                                },
+                                email: values.email,
+                                username: values.name,
+                                profile: {
+                                    firstName: values.name ? values.name.split(" ")[0] : values.name,
+                                    lastName: "",
+                                }
                             });
-                            Router.replace('/timer');
+                            Router.replace('/login');
                         } catch (err) {
                             setErrors({email : err.message || err});
                         }
@@ -54,7 +57,7 @@ export class LoginComponent extends React.Component {
                         handleSubmit,
                         isSubmitting,
                     }) => (
-                        <TablerLoginPage
+                        <TablerRegisterPage
                         onSubmit={handleSubmit}
                         onChange={handleChange}
                         onBlur={handleBlur}
@@ -70,4 +73,4 @@ export class LoginComponent extends React.Component {
     }
 }
 
-export default LoginComponent;
+export default RegisterComponent;
