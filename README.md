@@ -1,12 +1,11 @@
-# Javascript graphql client server boilerplate
+# Javascript Graphql client-server boilerplate
 
-Boilerplate for Advanced graphql based client server architecture
+Boilerplate for Advanced graphql and javascript based client server architecture
 
 ## Implementation
 
 Implmented using the following tech's:
 
-```
 - Validations: https://github.com/jquense/yup
 - ORM: https://github.com/szokodiakos/typegoose & mongoose OR Prisma?
 - GraphQL Server: https://github.com/apollographql/apollo-server/tree/master/packages/apollo-server-koa
@@ -27,12 +26,11 @@ Implmented using the following tech's:
 - Animations: https://github.com/react-spring/react-spring
 - Local Storage: https://github.com/Nozbe/WatermelonDB or localForage?
 - Charts: Apex, Frappe or Chart.js
-- parcel, webpack or rollup?
-```
+- Parcel, webpack or rollup: TDB
 
 ## Install
 
-clone the repo and perform the following:
+Clone the repo and perform the following:
 
 ### To start server
 ```
